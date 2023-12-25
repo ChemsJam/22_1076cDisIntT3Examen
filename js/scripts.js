@@ -57,7 +57,7 @@ document.getElementById('btn_registrar').addEventListener('click', function (eve
     // Si todas las validaciones son exitosas:
     // Recolectar datos del formulario
     const nombre = document.getElementById('nombre').value;
-    const control = document.getElementById('control').value;
+    const ncontrol = document.getElementById('control').value;
     const correo = document.getElementById('correo').value;
     const num_tel = document.getElementById('num_tel').value;
     const genero = document.querySelector('input[name="genero"]:checked').value;
@@ -66,7 +66,7 @@ document.getElementById('btn_registrar').addEventListener('click', function (eve
     // Crear un objeto con los datos a enviar al servidor
     const datos = {
         nombre: nombre,
-        control: control,
+        ncontrol: ncontrol,
         correo: correo,
         num_tel: num_tel,
         genero: genero,
@@ -85,7 +85,7 @@ document.getElementById('btn_registrar').addEventListener('click', function (eve
         if (response.ok) {
             // Si la inserción es exitosa, podrías redirigir a otra página o mostrar un mensaje
             alert('Registro exitoso');
-            window.location.href = 'otra_pagina.html'; // Redirigir a otra página
+            window.location.href = 'shop.php'; // Redirigir a otra página
         } else {
             alert('Error al registrar');
         }
